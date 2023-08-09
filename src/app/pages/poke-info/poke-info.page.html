@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Poke-info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div *ngIf="item" class="container">
+      <h1>{{item.name}}</h1>
+      <img src="{{item.sprites.front_default}}" alt="">
+      <p>Tipo: {{item.types[0].type.name}}</p>
+      <p>Proxima Evolução: {{item.forms[0].name}}</p>
+      <p>Altura: {{item.height}}</p>
+      <p>Largura: {{item.weight}}</p>
+      <p>Filme: {{item.moves[0].move.name}}</p>
+    </div>
+</ion-content>
